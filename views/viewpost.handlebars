@@ -1,0 +1,116 @@
+
+    <div id="wrapper">
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="viewpost.html">Bitnare</a>
+            </div>
+
+
+
+        </nav>
+        <!--/. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+
+                    <li>
+                        <a class="" href="adminDashboard.html"><i class="fa fa-dashboard"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="/post/addpost"><i class="fa fa-desktop"></i> Add Posts</a>
+                    </li>
+                    <li>
+                        <a class="active-menu" href="/post/viewpost"><i class="fa fa-bar-chart-o"></i> View Post</a>
+                    </li>
+
+
+
+
+
+                </ul>
+
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+            <div id="page-inner">
+
+                <div class="row">
+
+                    <div class="col-md-18 col-md-offset-1">
+
+                        <div class="panel panel-default panel-table">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col col-xs-6">
+                                        <h3 class="panel-title">Post Details</h3>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="panel-body table-responsive" id="card">
+                                <table class="table table-striped table-bordered table-list">
+                                    <thead>
+                                        <tr>
+                                            <th><em class="fa fa-cog"></em></th>
+                                           
+                                            <th>PostImage</th>
+                                            <th>PostDescripion</th>
+                                            <th>PostedDate</th>
+
+                                        </tr>
+                                    </thead>
+                           {{#each json.Posts.posts}}
+                                    <tbody>
+
+                <tr>
+                    <td align="center">
+                        <a class="btn btn-default"><em class="fa fa-pencil"></em></a>
+                        <a class="btn btn-danger"><em class="fa fa-trash"></em></a>
+                    </td>
+                    <td>
+                    {{#each this.postimage}}
+                    <img src="http://localhost:8000/{{this}}" width="100px" height="100px">
+                    {{/each}}
+                   </td>
+                    <td>{{this.postdescription}}</td>
+                    <td>{{this.posteddate}}</td>
+                    <td></td>
+
+                </tr>
+
+            </tbody>
+            {{/each}}
+                                </table>
+
+                            </div>
+                            <div class="panel-footer">
+                                <div class="row">
+
+                                    <div class="col col-xs-4">Page 1 of 5
+                                    </div>
+                                    <div class="col col-xs-8">
+                                        <ul class="pagination hidden-xs pull-right" id="myPager">
+                                        </ul>
+                                        <ul class="pagination visible-xs pull-right">
+                                            <li><a href="#">«</a></li>
+                                            <li><a href="#">»</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+

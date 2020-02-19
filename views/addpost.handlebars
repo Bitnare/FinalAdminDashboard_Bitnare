@@ -1,0 +1,81 @@
+
+
+<body>
+
+    <div id="wrapper">
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/dashboard">Bitnare</a>
+            </div>
+
+
+
+        </nav>
+        <!--/. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+
+                    <li>
+                        <a class="" href="/dashboard"><i class="fa fa-dashboard"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a class="active-menu" href="/post/addpost"><i class="fa fa-desktop"></i> Add Posts</a>
+                    </li>
+                    <li>
+                        <a href="/post/viewpost"><i class="fa fa-bar-chart-o"></i> View Post</a>
+                    </li>
+
+
+
+
+
+                </ul>
+
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+            <div id="page-inner">
+
+                <form method="POST" enctype="multipart/form-data" id="addposts" style="width: 500px; margin-left: 250px;">
+
+                    <div class="form-data row">
+                        <label for="text" class="col-12 col-form-label">Image</label>
+                        <div class="col-12">
+                            <input type="file" name="postimage" id="postimage" class="form-control here" multiple>
+                        </div>
+                        <div class="form-data row">
+                            <label for="text" class="col-12 col-form-label">Post description</label>
+                            <div class="col-12">
+                                <textarea name="postdescription" id="description" rows="5" required class="form-control here"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-data row">
+                            <label for="date" class="col-12 col-form-label"> Post Date</label>
+                            <div class="col-12">
+                                <input type="date" name="posteddate" id="date" required class="form-control here">
+                            </div>
+                        </div><br>
+                        <button type="submit" name="submit" id="submit" class="btn btn-primary" style="text-align: center;">Add new Post</button>
+
+                </form>
+                <div id="message"></div>
+                <p></p>
+                </div>
+                <!-- /. PAGE WRAPPER  -->
+            </div>
+
+</body>
+
+
+
+
