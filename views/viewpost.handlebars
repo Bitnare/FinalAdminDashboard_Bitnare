@@ -71,9 +71,10 @@
                                     <tbody>
 
                 <tr>
-                    <td align="center">
-                        <a class="btn btn-default"><em class="fa fa-pencil"></em></a>
-                        <a class="btn btn-danger"><em class="fa fa-trash"></em></a>
+                    <td>
+                        <a  href="editpost/{{this._id}}"><em class="fa fa-pencil"></em>Edit
+                        </a><br>
+                        <a class="deletepost" href="http://localhost:8000/post/delete/{{this._id}}" ><em class="fa fa-trash">Delete</em></a>
                     </td>
                     <td>
                     {{#each this.postimage}}
@@ -112,5 +113,6 @@
                 </div>
             </div>
         </div>
+
 
 
