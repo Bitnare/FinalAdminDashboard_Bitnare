@@ -1,20 +1,19 @@
-<link href="css/login.css" rel="stylesheet" id="bootstrap-css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
  <div class="wrapper fadeInDown">
         <div id="formContent">
             <!-- Tabs Titles -->
             <!-- Icon -->
             <div class="fadeIn first">
 
-                <h1>Bitnare Login</h1>
+                <h1>Bitnare User Login</h1>
             </div>
 
             <!-- Login Form -->
-            <form method="POST" id="loginform">
-                <input type="text" id="login" class="fadeIn second" name="username" id="uname" placeholder="username">
+            <form method="POST" id="userloginform" >
+                <input type="text"  class="fadeIn second" name="username" id="username" placeholder="username">
                 <input type="password" id="password" class="fadeIn third" name="password" id="password" placeholder="password">
-                <input type="submit" class="fadeIn fourth" value="Log In">
+                {{!-- <input type="submit" class="fadeIn fourth" value="Log In"> --}}
+                        <button type="submit" name="submit" id="submit" class="btn btn-primary" style="text-align: center;">login</button>
             </form>
 
             <!-- Remind Passowrd -->
