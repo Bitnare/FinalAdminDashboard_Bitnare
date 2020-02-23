@@ -1,7 +1,14 @@
 const express = require('express');
 const router = express.Router();
+const handlebars = require('express-handlebars');
+const multer = require('multer');
+const bodyParser = require('body-parser');
+
 const fetch = require('node-fetch');
 const axios = require('axios');
+router.use(bodyParser.urlencoded({ extended: true }));
+router.use(bodyParser.json());
+
 
 router.get('/addpost', (req, res, next) => {
     res.render('addpost');
@@ -31,13 +38,25 @@ router.get('/editpost/:postid', (req, res, next) => {
         return res.json();
 
     }).then(json => {
-        console.log(json)
+
         res.render('editpost', { json });
 
     })
 
 
 });
+
+
+router.post('/updateposts/:postid', (req, res, next) => {
+
+
+
+
+
+
+});
+
+
 
 
 module.exports = router;
