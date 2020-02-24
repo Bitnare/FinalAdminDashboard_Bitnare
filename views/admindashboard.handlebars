@@ -7,6 +7,7 @@
     <title>Admin Dashboard</title>
 
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="http://localhost:5000/assets/css/admindashboard.css" rel="stylesheet" />
 
     <!-- FontAwesome Styles-->
     <link href="assets/css/font-awesome.css" rel="stylesheet" />
@@ -62,15 +63,21 @@
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper">
             <div id="page-inner">
-
-
-
+<div class="card" style="width: 18rem;">
+ <h4>Total Posts:</h4>
+  <div class="card-body">
+  
+  {{#each json}}
+  <h3>{{this.count}}</h3>
+  {{/each}}
+   
+  </div>
+</div>
+                
+               
 
                 <!-- /. ROW  -->
-                <footer>
-                    <p>All right reserved.</a>
-                    </p>
-                </footer>
+                
             </div>
             <!-- /. PAGE INNER  -->
         </div>

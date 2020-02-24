@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 
 const fetch = require('node-fetch');
 const axios = require('axios');
+const qs = require('qs');
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(bodyParser.json());
 
@@ -49,8 +50,20 @@ router.get('/editpost/:postid', (req, res, next) => {
 
 router.post('/updateposts/:postid', (req, res, next) => {
 
+    const postid = req.params.postid;
+    const data = {
+        postdescription: req.body.postdescription,
+        posteddate: req.body.posteddate
 
 
+    }
+    axios.put('http://localhost:8000/post/update/' + postid, {
+        data
+    }).then(res => {
+
+    }).catch(err => {
+        console.log(err)
+    })
 
 
 
