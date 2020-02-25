@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 exphbs = hbs.create({
     helpers: {
         dateFormat: (posteddate, format) => {
-            console.log(posteddate)
+
 
             return moment(posteddate)
                 .format('MM/DD/YYYY');

@@ -2,13 +2,12 @@ const express = require('express');
 const router = express.Router();
 const handlebars = require('express-handlebars');
 const multer = require('multer');
-const bodyParser = require('body-parser');
+
 
 const fetch = require('node-fetch');
 const axios = require('axios');
 const qs = require('qs');
-router.use(bodyParser.urlencoded({ extended: true }));
-router.use(bodyParser.json());
+
 
 
 router.get('/addpost', (req, res, next) => {
@@ -57,13 +56,23 @@ router.post('/updateposts/:postid', (req, res, next) => {
 
 
     }
-    axios.put('http://localhost:8000/post/update/' + postid, {
-        data
-    }).then(res => {
 
-    }).catch(err => {
-        console.log(err)
-    })
+    axios({
+            method: 'put',
+            url: 'http://localhost:8000/post/update/' + postid,
+            data: data,
+            config: { headers: { 'Content-Type': 'multipart/form-data' } }
+        })
+        .then(function(response) {
+            if (response.status === 200) {
+                res.redirect('http://localhost:5000/post/viewpost');
+
+            }
+        })
+        .catch(function(response) {
+            console.log(response);
+
+        });
 
 
 
