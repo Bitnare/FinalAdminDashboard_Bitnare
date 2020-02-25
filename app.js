@@ -9,6 +9,7 @@ const bodyParser = require('body-parser');
 const postRoutes = require('./routes/postRoutes.js');
 const loginroutes = require('./routes/loginRoutes.js');
 const dashboardRoutes = require('./routes/dashboard.js');
+const adminLogin = require('./routes/adminLogin');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -38,6 +39,8 @@ app.use(bodyParser.json());
 app.use('/post', postRoutes);
 app.use('/login', loginroutes);
 app.use('/dashboard', dashboardRoutes);
+app.use('/admin', adminLogin);
+
 
 
 app.listen(5000, () => {
