@@ -19,9 +19,16 @@
     "homepage": "https://github.com/Bitnare/FinalAdminDashboard_Bitnare#readme",
     "dependencies": {
         "axios": "^0.19.2",
+        "body-parser": "^1.19.0",
         "express": "^4.17.1",
         "express-handlebars": "^3.1.0",
+        "handlebars-dateformat": "^1.1.1",
+        "handlebars-helpers": "^0.10.0",
+        "handlebars-intl": "^1.1.2",
+        "moment": "^2.24.0",
+        "multer": "^1.4.2",
         "node-fetch": "^2.6.0",
-        "nodemon": "^2.0.2"
+        "nodemon": "^2.0.2",
+        "qs": "^6.9.1"
     }
 }

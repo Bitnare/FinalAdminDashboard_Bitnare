@@ -1,0 +1,26 @@
+body {
+    font-family: sans-serif;
+}
+
+#container {
+    background: #DDD;
+    max-width: 1400px;
+}
+
+.item {
+    width: 200px;
+    float: left;
+}
+
+.item img {
+    display: block;
+    width: 100%;
+}
+
+button {
+    font-size: 18px;
+}
+
+.container {
+    width: 100%;
+}
