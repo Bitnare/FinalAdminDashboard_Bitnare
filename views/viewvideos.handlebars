@@ -26,13 +26,13 @@
                         <a href="/post/addpost"><i class="fa fa-desktop"></i> Add Posts</a>
                     </li>
                     <li>
-                        <a class="active-menu" href="/post/viewpost"><i class="fa fa-bar-chart-o"></i> View Post</a>
+                        <a  href="/post/viewpost"><i class="fa fa-bar-chart-o"></i> View Post</a>
                     </li>
-                       <li>
-                        <a href="/video/addvideo"><i class="fa fa-bar-chart-o"></i> Add video</a>
+<li>
+                        <a  href="/video/addvideo"><i class="fa fa-bar-chart-o"></i> Add video</a>
                     </li>
                     <li>
-                        <a href="/video/viewvideo"><i class="fa fa-bar-chart-o"></i> View video</a>
+                        <a class="active-menu" href="video/viewvideo"><i class="fa fa-bar-chart-o"></i> View video</a>
                     </li>
 
 
@@ -68,34 +68,45 @@
                                         <tr>
                                             <th><em class="fa fa-cog"></em></th>
                                            
-                                            <th>PostImage</th>
-                                            <th>PostDescripion</th>
-                                            <th>PostedDate</th>
+                                            <th>Video</th>
+                                            <th>VideoDescripion</th>
+                                            <th>VideoDate</th>
 
                                         </tr>
                                     </thead>
-                           {{#each json.Posts.posts}}
+                          {{#each json.Videos}}
                                     <tbody>
 
                 <tr>
                     <td>
-                        <a  href="editpost/{{this._id}}"><em class="fa fa-pencil"></em>Edit
+                        <a  href=><em class="fa fa-pencil"></em>Edit
                         </a><br>
-                        <a class="deletepost" class="btn btn-primary" href="http://localhost:8000/post/delete/{{this._id}}" ><em class="fa fa-trash">Delete</em></a>
+                        <form action="/video/delete/{{this._id}}" method="post">
+                           <button type="submit" class="btn btn-primary">Delete</button>
+
+                                 
+                        </form>
                     </td>
+                   
                     <td>
-                    {{#each this.postimage}}
-                    <img src="http://localhost:8000/{{this}}" width="100px" height="100px">
-                    {{/each}}
+                   {{#each this.videopath}}
+                   <video width="250" height="150" controls>
+  <source src="http://localhost:8000/{{this}}" type="video/mp4">
+ 
+
+</video>
+           {{/each}}        
                    </td>
-                    <td>{{this.postdescription}}</td>
-                    <td>{{dateFormat this.posteddate}}</td>
+                   
+                    <td>{{this.videodescription}}</td>
+                    <td>{{dateFormat this.videodate}}</td>
                     
+                  
 
                 </tr>
 
             </tbody>
-            {{/each}}
+             {{/each}}
                                 </table>
 
                             </div>
