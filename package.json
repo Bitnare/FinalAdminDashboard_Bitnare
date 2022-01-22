@@ -27,7 +27,7 @@
         "handlebars-intl": "^1.1.2",
         "moment": "^2.24.0",
         "multer": "^1.4.2",
-        "node-fetch": "^2.6.0",
+        "node-fetch": "^3.1.1",
         "nodemon": "^2.0.2",
         "qs": "^6.9.1"
     }
